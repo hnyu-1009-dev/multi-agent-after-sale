@@ -1,11 +1,3 @@
-
-
-from backend.knowledge.repositories.file_repository import FileRepository
-from backend.knowledge.services.ingestion.ingestion_processor import (
-    IngestionProcessor,
-)
-from backend.knowledge.config.settings import settings
-
 from tqdm import tqdm
 import  time
 
