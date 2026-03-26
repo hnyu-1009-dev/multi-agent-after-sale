@@ -1,3 +1,9 @@
 /backend/knowledge/data/
 /front/knowlege_platform_ui/.vscode/
 /front/agent_web_ui/node_modules/
+/.vscode/
+/ignor
+/.idea
+/front/agent_web_ui/node_modules
+/front/knowlege_platform_ui/node_modules
+/.gitignore
