@@ -1,6 +1,7 @@
 from typing import List
 from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
+from backend.knowledge.config.settings import settings
 
 
 class QueryService:
@@ -12,6 +13,7 @@ class QueryService:
             model_name=settings.MODEL,
             openai_api_key=settings.API_KEY,
             openai_api_base=settings.BASE_URL,
+            temperature=0.7,
         )  # temperature作用：控制模型输出的随机度 尽量不要让它乱发挥（尽最大努力保证：影响因素：硬件（并行gpu：精度变乱）网络（moe专家））
 
     def generate_answer(
@@ -54,12 +56,14 @@ class QueryService:
          ```
 
          【回答要求】：
+         1.  **基于事实**：严格基于【参考资料】的内容回答，严禁编造资料中未提及的信息。如果资料无法回答问题，请回答按照你的理解进行回答
          2.  **去特定化处理**：(重要)
              - 除非用户问题中明确指明了特定型号/品牌，否则在回答中请**移除**具体的设备型号、品牌名称（如“联想”、“K900”等）。
              - 例如：将“联想手机设置”泛化为“手机设置”；将“打开联想电脑管家”泛化为“打开系统管理软件”或“相关设置工具”。
          3.  **结构清晰**：
              - 如果是操作步骤，请使用有序列表（1. 2. 3.）。
              - 语言风格应简洁、专业、直接，避免寒暄和废话。
+         4. 引用来源：以参考知识库中的知识
 
          【开始回答】：
          """

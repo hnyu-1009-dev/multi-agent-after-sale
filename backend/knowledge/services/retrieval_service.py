@@ -8,6 +8,14 @@ logger = logging.getLogger(__name__)
 
 from typing import List, Dict, Any
 from langchain_core.documents import Document
+from backend.knowledge.repositories.vector_store_repository import (
+    VectorStoreRepository,
+)
+from backend.knowledge.services.ingestion.ingestion_processor import (
+    IngestionProcessor,
+)
+from backend.knowledge.utils.markdown_utils import MarkDownUtils
+from backend.knowledge.config.settings import settings
 from sklearn.metrics.pairwise import cosine_similarity
 
 
