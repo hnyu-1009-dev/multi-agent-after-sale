@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 import uvicorn
 from fastapi import FastAPI
-from api.routers import router
+from backend.knowledge.api.routers import router
 
 
 def create_fast_api() -> FastAPI:

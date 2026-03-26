@@ -1,7 +1,7 @@
 from joblib.testing import raises
 from langsmith import expect
 
-from config.settings import settings
+from backend.knowledge.config.settings import settings
 from http.client import HTTPException
 
 import requests

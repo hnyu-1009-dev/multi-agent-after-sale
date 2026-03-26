@@ -1,10 +1,12 @@
 import os.path
 from wsgiref.validate import validator
-from repositories.vector_store_repository import VectorStoreRepository
+from backend.knowledge.repositories.vector_store_repository import (
+    VectorStoreRepository,
+)
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import  RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.utils import filter_complex_metadata
-from  utils.markdown_utils import MarkDownUtils
+from  backend.knowledge.utils.markdown_utils import MarkDownUtils
 import  logging
 logging.basicConfig(level=logging.INFO)
 logger=logging.getLogger(__name__)

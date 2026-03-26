@@ -7,11 +7,17 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from fastapi.concurrency import run_in_threadpool
-from services.ingestion.ingestion_processor import IngestionProcessor
-from schemas.schema import UploadResponse, QueryResponse, QueryRequest
-from services.retrieval_service import RetrievalService
-from services.query_service import QueryService
-from config.settings import settings
+from backend.knowledge.services.ingestion.ingestion_processor import (
+    IngestionProcessor,
+)
+from backend.knowledge.schemas.schema import (
+    UploadResponse,
+    QueryResponse,
+    QueryRequest,
+)
+from backend.knowledge.services.retrieval_service import RetrievalService
+from backend.knowledge.services.query_service import QueryService
+from backend.knowledge.config.settings import settings
 
 import tempfile
 
