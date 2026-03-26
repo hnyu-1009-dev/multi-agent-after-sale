@@ -6,5 +6,3 @@
 /.vscode/
 /backend/knowledge/.env
 /front/agent_web_ui/node_modules/
-/front/knowlege_platform_ui/node_modules
-/front/agent_web_ui/node_modules

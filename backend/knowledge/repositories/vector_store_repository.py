@@ -8,7 +8,6 @@ logger = logging.getLogger(__name__)
 
 # 2. from三方的
 from langchain_chroma import Chroma
-from backend.knowledge.config.settings import settings
 from langchain_core.documents import Document
 from langchain_openai.embeddings import OpenAIEmbeddings
 from typing import List
