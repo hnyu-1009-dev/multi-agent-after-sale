@@ -7,17 +7,17 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from fastapi.concurrency import run_in_threadpool
-from backend.knowledge.services.ingestion.ingestion_processor import (
+from knowledge.services.ingestion.ingestion_processor import (
     IngestionProcessor,
 )
-from backend.knowledge.schemas.schema import (
+from knowledge.schemas.schema import (
     UploadResponse,
     QueryResponse,
     QueryRequest,
 )
-from backend.knowledge.services.retrieval_service import RetrievalService
-from backend.knowledge.services.query_service import QueryService
-from backend.knowledge.config.settings import settings
+from knowledge.services.retrieval_service import RetrievalService
+from knowledge.services.query_service import QueryService
+from knowledge.config.settings import settings
 
 import tempfile
 
@@ -43,7 +43,9 @@ async def upload_file(file: UploadFile = File(...)):
             os.makedirs(temp_md_dir, exist_ok=True)
 
         # 1. 处理临时文件
-        async with aiofiles.tempfile.NamedTemporaryFile(delete=False, suffix=file_suffix) as temp_file:
+        async with aiofiles.tempfile.NamedTemporaryFile(
+            delete=False, suffix=file_suffix
+        ) as temp_file:
 
             # a. 读取上传文件的内容 # 对象（异步协程）缓冲区【1M】空间
             while content := await file.read(1024 * 1024):
@@ -56,7 +58,9 @@ async def upload_file(file: UploadFile = File(...)):
         shutil.move(temp_file_path, tmp_md_path)
 
         # 2. 磁盘写入完成,入库操作  # TODO(去重)
-        chunks_added = await run_in_threadpool(ingestion_processor.ingest_file, tmp_md_path)
+        chunks_added = await run_in_threadpool(
+            ingestion_processor.ingest_file, tmp_md_path
+        )
         print(f"临时文件路径:{temp_file_path}")
 
         # 3.构建文件上传的响应对象
@@ -64,7 +68,7 @@ async def upload_file(file: UploadFile = File(...)):
             status="success",
             message="文档上传知识库成功",
             file_name=file.filename,
-            chunks_added=chunks_added
+            chunks_added=chunks_added,
         )
 
     except Exception as e:
@@ -102,10 +106,7 @@ async def query(request: QueryRequest):
         answer = query_service.generate_answer(user_question, retrieval_context)
 
         # 4. 封装到响应数据模型
-        return QueryResponse(
-            question=user_question,
-            answer=answer
-        )
+        return QueryResponse(question=user_question, answer=answer)
     except Exception as e:
         logger.error(f"调用查询知识库服务失败:原因:{str(e)}")
-        raise HTTPException(status_code=500,detail="服务内部出现异常")
+        raise HTTPException(status_code=500, detail="服务内部出现异常")

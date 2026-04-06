@@ -1,6 +1,6 @@
 import pymysql
 from dbutils.pooled_db import PooledDB
-from backend.app.config.settings import settings
+from app.config.settings import settings
 
 
 class DatabasePool:

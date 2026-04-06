@@ -1,6 +1,403 @@
-2026-03-24 20:46:48,726 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
-2026-03-24 20:46:48,904 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
-2026-03-24 20:46:48,906 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
-2026-03-24 23:55:42,249 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
-2026-03-24 23:55:42,386 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
-2026-03-24 23:55:42,388 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:39:41,537 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:39:41,652 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:39:41,654 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:39:41,690 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:43:49,924 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:43:49,972 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:43:49,973 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:43:50,001 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:49:22,399 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:49:22,467 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:49:22,469 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:49:22,496 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:51:24,808 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:51:24,875 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:51:24,878 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:51:24,904 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:52:54,377 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:52:54,450 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:52:54,452 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:52:54,484 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:57:22,365 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:57:22,432 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:57:22,434 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:57:22,459 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:57:22,648 | ERROR    | ITS_App:13 | 百度地图MCP连接失败: Failed to connect to MCP server '百度地图': HTTP error 405 (Method Not Allowed)
+2026-04-06 00:57:22,792 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 00:59:47,356 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 00:59:47,422 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 00:59:47,424 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 00:59:47,452 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 00:59:47,801 | ERROR    | ITS_App:13 | 百度地图MCP连接失败: Failed to connect to MCP server '百度地图': HTTP error 405 (Method Not Allowed)
+2026-04-06 01:00:18,185 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 01:00:18,249 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 01:00:18,251 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 01:00:18,277 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 01:06:50,889 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 01:06:50,945 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 01:06:50,948 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 01:06:50,976 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 01:06:51,031 | WARNING  | ITS_App:18 | MCP client connect failed: 通用联网搜索: Failed to connect to MCP server '通用联网搜索': Could not reach the server.
+2026-04-06 01:06:51,032 | WARNING  | ITS_App:18 | MCP client connect failed: 百度地图: Failed to connect to MCP server '百度地图': Could not reach the server.
+2026-04-06 01:06:51,032 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 01:08:27,699 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 01:08:27,748 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 01:08:27,750 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 01:08:27,781 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 01:08:27,845 | WARNING  | ITS_App:18 | MCP client connect failed: 通用联网搜索: Failed to connect to MCP server '通用联网搜索': Could not reach the server.
+2026-04-06 01:08:27,860 | WARNING  | ITS_App:18 | MCP client connect failed: 百度地图: Failed to connect to MCP server '百度地图': Could not reach the server.
+2026-04-06 01:08:27,861 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 01:10:10,044 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 01:10:10,099 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 01:10:10,100 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 01:10:10,141 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 01:10:10,213 | WARNING  | ITS_App:18 | MCP client connect failed: 通用联网搜索: Failed to connect to MCP server '通用联网搜索': Could not reach the server.
+2026-04-06 01:10:10,232 | WARNING  | ITS_App:18 | MCP client connect failed: 百度地图: Failed to connect to MCP server '百度地图': Could not reach the server.
+2026-04-06 01:10:10,240 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 01:11:16,980 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 01:11:17,050 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 01:11:17,053 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 01:11:17,082 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 01:11:17,551 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 01:11:22,121 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 01:11:22,122 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 01:12:19,426 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:12:19,427 | INFO     | ITS_App:58 | 获取用户 root1 的所有会话记忆数据
+2026-04-06 01:12:19,429 | DEBUG    | ITS_App:63 | 成功获取用户 root1 的 2 个会话
+2026-04-06 01:12:58,377 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:12:58,377 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:12:58,378 | WARNING  | ITS_App:262 | 用户目录不存在: root2
+2026-04-06 01:12:58,378 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 0 个会话
+2026-04-06 01:13:10,214 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:13:10,215 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:13:10,216 | WARNING  | ITS_App:262 | 用户目录不存在: root2
+2026-04-06 01:13:10,216 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 0 个会话
+2026-04-06 01:13:31,209 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 你能为我干些什么呢
+2026-04-06 01:13:33,060 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:13:33,060 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:13:33,062 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 1 个会话
+2026-04-06 01:13:48,983 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑不能开机怎么办
+2026-04-06 01:13:50,334 | INFO     | ITS_App:109 | [Route] 转交技术专家: 电脑不能开机怎么办...
+2026-04-06 01:13:56,076 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:13:56,077 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:13:56,078 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 1 个会话
+2026-04-06 01:14:10,966 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 请为我找到最近的维修站
+2026-04-06 01:14:12,297 | INFO     | ITS_App:210 | [Route] 转交业务专家: 最近的维修站...
+2026-04-06 01:14:38,518 | DEBUG    | ITS_App:147 | [Location] Trying IP location for: 222.135.230.254
+2026-04-06 01:14:38,773 | INFO     | ITS_App:180 | [Location] IP location success: 222.135.230.254 → (36.500517, 117.073057)
+2026-04-06 01:14:42,016 | INFO     | ITS_App:278 | [NearestShops] Found 3 shops near (36.500517178099436, 117.07305745780165)
+2026-04-06 01:15:15,781 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:15:15,781 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:15:15,782 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 1 个会话
+2026-04-06 01:15:37,893 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:15:37,893 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:15:37,895 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 1 个会话
+2026-04-06 01:19:31,212 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 你还记得我和你的上一个对话吗
+2026-04-06 01:19:32,450 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:19:32,450 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:19:32,452 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:30:45,220 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:30:45,221 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:30:45,223 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:30:57,261 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:30:57,262 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:30:57,266 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:32:16,181 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:32:16,182 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:32:16,183 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:33:11,321 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:33:11,321 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:33:11,323 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:33:15,407 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:33:15,407 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:33:15,409 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:33:59,950 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:33:59,950 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:33:59,952 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:36:34,459 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:36:34,459 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:36:34,460 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:37:09,927 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:37:09,927 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:37:09,928 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:38:22,421 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:38:22,422 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:38:22,423 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:42:42,076 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:42:42,077 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:42:42,079 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:42:45,605 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:42:45,607 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:42:45,609 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:42:51,623 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:42:51,623 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:42:51,624 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:47:53,241 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:47:53,242 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:47:53,243 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:49:42,179 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:49:42,180 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:49:42,181 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 01:53:51,283 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 01:53:51,284 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 01:53:51,285 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:01:46,933 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:01:46,933 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:01:46,935 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:31:21,197 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:31:21,198 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:31:21,200 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:32:45,570 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:32:45,570 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:32:45,572 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:32:54,064 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:32:54,064 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:32:54,066 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:34:03,602 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:34:03,602 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:34:03,603 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:34:17,815 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:34:17,815 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:34:17,817 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:35:13,420 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:35:13,420 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:35:13,421 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:35:35,052 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何给电脑更新系统
+2026-04-06 02:35:36,569 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何给电脑更新系统...
+2026-04-06 02:35:37,819 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何给电脑更新系统...
+2026-04-06 02:35:40,650 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:35:40,650 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:35:40,652 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:41:32,917 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何给电脑更新系统
+2026-04-06 02:41:34,294 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何给电脑更新系统...
+2026-04-06 02:41:37,258 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:41:37,258 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:41:37,259 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:44:13,235 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何给电脑更新系统
+2026-04-06 02:44:14,524 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何给电脑更新系统...
+2026-04-06 02:44:17,298 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:44:17,299 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:44:17,300 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:46:46,842 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用u盘安装windows系统
+2026-04-06 02:46:48,251 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何使用u盘安装windows系统...
+2026-04-06 02:46:53,444 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:46:53,445 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:46:53,446 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 2 个会话
+2026-04-06 02:50:55,557 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用u盘安装windows系统
+2026-04-06 02:50:56,928 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何使用u盘安装windows系统...
+2026-04-06 02:50:58,324 | INFO     | ITS_App:109 | [Route] 转交技术专家: 如何使用u盘安装windows系统...
+2026-04-06 02:51:00,200 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:51:00,200 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:51:00,202 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 02:55:34,601 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 02:55:34,602 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 02:55:34,603 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 02:55:34,603 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 02:55:37,709 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 02:55:37,770 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 02:55:37,772 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 02:55:37,796 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 02:55:38,302 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 02:55:42,832 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 02:55:42,832 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 02:55:43,006 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:55:43,006 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:55:43,008 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 02:55:48,629 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用u盘安装windows系统
+2026-04-06 02:55:50,265 | INFO     | ITS_App:176 | [Route] 转交技术专家: 如何使用u盘安装windows系统...
+2026-04-06 02:55:50,265 | INFO     | ITS_App:192 | [Route] 技术问题先查询知识库
+2026-04-06 02:56:20,858 | INFO     | ITS_App:196 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 02:56:29,933 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:56:29,933 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:56:29,935 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 02:58:16,754 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 02:58:16,793 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 02:59:04,216 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 02:59:04,216 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 02:59:04,218 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 02:59:04,218 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 02:59:06,985 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 02:59:07,044 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 02:59:07,046 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 02:59:07,072 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 02:59:07,711 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 02:59:12,108 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 02:59:12,108 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 02:59:17,436 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何重装系统
+2026-04-06 02:59:19,014 | INFO     | ITS_App:221 | [Route] 转交技术专家: 如何重装系统...
+2026-04-06 02:59:19,015 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 02:59:40,510 | INFO     | ITS_App:241 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 02:59:51,040 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 02:59:51,040 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 02:59:51,042 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 03:00:09,923 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用u盘安装windows系统
+2026-04-06 03:00:11,284 | INFO     | ITS_App:221 | [Route] 转交技术专家: 如何使用u盘安装windows系统...
+2026-04-06 03:00:11,284 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 03:00:39,054 | INFO     | ITS_App:241 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 03:00:49,094 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 03:00:49,094 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 03:00:49,096 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 11:39:51,909 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 11:39:51,910 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 11:39:51,917 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 11:43:08,069 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 11:43:08,069 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 11:43:08,071 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 11:52:53,635 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 11:52:53,738 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 11:52:53,740 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 11:52:53,768 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 11:52:54,365 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 11:52:58,818 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 11:52:58,819 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 11:53:35,003 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 11:53:35,004 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 11:53:35,006 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 11:54:24,321 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用 U 盘安装 Windows 系统？
+2026-04-06 11:54:26,219 | INFO     | ITS_App:221 | [Route] 转交技术专家: 如何使用 U 盘安装 Windows 系统？...
+2026-04-06 11:54:26,220 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 11:55:26,255 | WARNING  | ITS_App:245 | [Route] 知识库预查询失败，继续回退技术专家智能体: 
+2026-04-06 11:55:26,256 | ERROR    | ITS_App:304 | [Route] 技术专家执行异常: Server not initialized. Make sure you call `connect()` first.
+2026-04-06 11:55:26,256 | INFO     | ITS_App:178 | [Route] 启用通用技术回退专家
+2026-04-06 11:56:47,267 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 11:56:47,325 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 11:56:47,326 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 11:56:47,350 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 11:56:48,712 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 11:56:52,386 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 11:56:52,386 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 11:58:11,678 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 11:58:11,681 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 11:58:11,684 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 11:58:11,685 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 11:58:18,951 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 11:58:18,989 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 11:58:18,989 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 11:58:19,012 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 11:58:19,528 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 11:58:49,056 | WARNING  | ITS_App:16 | MCP client connect timed out after 30s: 通用联网搜索
+2026-04-06 11:58:49,057 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 11:58:53,164 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 11:58:53,207 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 11:58:53,208 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 11:58:53,238 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 11:58:53,659 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 11:58:58,266 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 11:58:58,266 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 11:59:33,675 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 11:59:33,675 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 11:59:33,676 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 11:59:33,677 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 11:59:36,574 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 11:59:36,630 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 11:59:36,631 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 11:59:36,655 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 11:59:41,473 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 11:59:41,700 | WARNING  | ITS_App:16 | MCP client connect timed out after 5s: 通用联网搜索
+2026-04-06 11:59:41,701 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:08:21,436 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 12:08:21,440 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 12:08:21,441 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 12:08:21,441 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 12:08:25,941 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 12:08:26,010 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 12:08:26,011 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 12:08:26,040 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 12:08:26,232 | INFO     | ITS_App:14 | MCP client connected: 通用联网搜索
+2026-04-06 12:08:26,606 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 12:08:26,606 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:08:42,624 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 如何使用 U 盘安装 Windows 系统？
+2026-04-06 12:08:44,712 | INFO     | ITS_App:221 | [Route] 转交技术专家: 如何使用 U 盘安装 Windows 系统？...
+2026-04-06 12:08:44,713 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:09:00,299 | INFO     | ITS_App:241 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 12:09:11,097 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:09:11,099 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:09:11,107 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 12:19:53,645 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:19:53,646 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:19:53,648 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 12:20:08,843 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑开机后黑屏，但风扇还在转，应该怎么排查？
+2026-04-06 12:20:10,556 | INFO     | ITS_App:221 | [Route] 转交技术专家: 电脑开机后黑屏，但风扇还在转，应该怎么排查？...
+2026-04-06 12:20:10,556 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:21:10,599 | WARNING  | ITS_App:245 | [Route] 知识库预查询失败，继续回退技术专家智能体: 
+2026-04-06 12:26:06,052 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 12:26:06,122 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 12:26:06,124 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 12:26:06,152 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 12:26:06,364 | INFO     | ITS_App:14 | MCP client connected: 通用联网搜索
+2026-04-06 12:26:06,720 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 12:26:06,721 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:26:16,701 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 12:26:16,702 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 12:26:16,702 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 12:26:16,703 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 12:26:20,371 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 12:26:20,411 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 12:26:20,412 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 12:26:20,435 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 12:26:20,601 | INFO     | ITS_App:14 | MCP client connected: 通用联网搜索
+2026-04-06 12:26:20,907 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 12:26:20,908 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:26:26,059 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:26:26,059 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:26:26,061 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 3 个会话
+2026-04-06 12:26:41,302 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑开机后黑屏，但风扇还在转，应该怎么排查？
+2026-04-06 12:26:43,541 | INFO     | ITS_App:221 | [Route] 转交技术专家: 电脑开机后黑屏，但风扇还在转，应该怎么排查？...
+2026-04-06 12:26:43,541 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:27:43,559 | WARNING  | ITS_App:245 | [Route] 知识库预查询失败，继续回退技术专家智能体: 
+2026-04-06 12:37:18,859 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:37:18,860 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:37:18,861 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话
+2026-04-06 12:50:18,452 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 12:50:18,454 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 12:50:18,455 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 12:50:18,455 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 12:50:22,198 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 12:50:22,270 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 12:50:22,272 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 12:50:22,303 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 12:50:22,502 | INFO     | ITS_App:14 | MCP client connected: 通用联网搜索
+2026-04-06 12:50:22,851 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 12:50:22,851 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:51:03,479 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑开机后黑屏，但风扇还在转，应该怎么排查？
+2026-04-06 12:51:05,389 | INFO     | ITS_App:221 | [Route] 转交技术专家: 电脑开机后黑屏，但风扇还在转，应该怎么排查？...
+2026-04-06 12:51:05,389 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:51:24,845 | INFO     | ITS_App:241 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 12:51:35,953 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:51:35,954 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:51:35,955 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话
+2026-04-06 12:51:52,529 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 小米的股价是多少
+2026-04-06 12:51:54,084 | INFO     | ITS_App:221 | [Route] 转交技术专家: 小米的股价是多少...
+2026-04-06 12:51:54,084 | INFO     | ITS_App:249 | [Route] 识别为实时资讯问题，跳过知识库预查询
+2026-04-06 12:52:03,451 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:52:03,452 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:52:03,454 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话
+2026-04-06 12:52:16,178 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 山东农业大学需要多少分考上
+2026-04-06 12:52:17,619 | INFO     | ITS_App:221 | [Route] 转交技术专家: 山东农业大学需要多少分考上...
+2026-04-06 12:52:17,620 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:52:36,697 | INFO     | ITS_App:241 | [Route] 知识库命中，直接返回知识库结果
+2026-04-06 12:52:46,723 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:52:46,725 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:52:46,726 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话
+2026-04-06 12:53:12,496 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑爆炸了怎么办
+2026-04-06 12:53:14,201 | INFO     | ITS_App:221 | [Route] 转交技术专家: 电脑爆炸了怎么办...
+2026-04-06 12:53:14,201 | INFO     | ITS_App:237 | [Route] 技术问题先查询知识库
+2026-04-06 12:53:39,224 | WARNING  | ITS_App:245 | [Route] 知识库预查询失败，继续回退技术专家智能体: 
+2026-04-06 12:54:05,717 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:54:05,717 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:54:05,719 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话
+2026-04-06 12:54:35,047 | INFO     | ITS_App:29 | 应用关闭，清理MCP连接...
+2026-04-06 12:54:35,049 | INFO     | ITS_App:36 | MCP client cleaned up: 通用联网搜索
+2026-04-06 12:54:35,049 | INFO     | ITS_App:36 | MCP client cleaned up: 百度地图
+2026-04-06 12:54:35,049 | INFO     | ITS_App:32 | MCP连接清理完成
+2026-04-06 12:54:38,465 | DEBUG    | ITS_App:34 | 成功加载提示词: technical_agent
+2026-04-06 12:54:38,526 | DEBUG    | ITS_App:34 | 成功加载提示词: comprehensive_service_agent
+2026-04-06 12:54:38,527 | DEBUG    | ITS_App:34 | 成功加载提示词: orchestrator_v1
+2026-04-06 12:54:38,552 | INFO     | ITS_App:19 | 应用启动，建立MCP连接...
+2026-04-06 12:54:38,719 | INFO     | ITS_App:14 | MCP client connected: 通用联网搜索
+2026-04-06 12:54:39,091 | INFO     | ITS_App:14 | MCP client connected: 百度地图
+2026-04-06 12:54:39,091 | INFO     | ITS_App:22 | MCP连接建立完成
+2026-04-06 12:54:57,057 | INFO     | ITS_App:31 | 用户 root2 发送的待处理任务 电脑自己飞走了怎么办
+2026-04-06 12:55:02,095 | INFO     | ITS_App:54 | 接收到获取用户会话请求
+2026-04-06 12:55:02,096 | INFO     | ITS_App:58 | 获取用户 root2 的所有会话记忆数据
+2026-04-06 12:55:02,098 | DEBUG    | ITS_App:63 | 成功获取用户 root2 的 4 个会话

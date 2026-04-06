@@ -1,4 +1,4 @@
-from logger import logger
+from app.infrastructure.logging.logger import logger
 
 
 def some_function():

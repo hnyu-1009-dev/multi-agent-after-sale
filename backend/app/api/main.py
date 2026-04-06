@@ -2,9 +2,9 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from backend.app.api.routers import router
-from backend.app.infrastructure.logging.logger import logger
-from backend.app.infrastructure.tools.mcp.mcp_manager import mcp_connect, mcp_cleanup
+from app.api.routers import router
+from app.infrastructure.logging.logger import logger
+from app.infrastructure.tools.mcp.mcp_manager import mcp_connect, mcp_cleanup
 
 
 @asynccontextmanager
@@ -55,10 +55,13 @@ def create_fast_api() -> FastAPI:
     return app
 
 
+app = create_fast_api()
+
+
 if __name__ == "__main__":
     print("1.准备启动Web服务器")
     try:
-        uvicorn.run(app=create_fast_api(), host="127.0.0.1", port=8000)
+        uvicorn.run(app="app.api.main:app", host="127.0.0.1", port=8000)
 
         logger.info("2.启动Web服务器成功...")
 

@@ -1,6 +1,6 @@
 from agents import OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
-from backend.app.config.settings import settings
+from app.config.settings import settings
 
 # 硅基流动配置(主模型)
 SF_API_KEY = settings.SF_API_KEY

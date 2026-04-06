@@ -8,14 +8,14 @@ logger = logging.getLogger(__name__)
 
 from typing import List, Dict, Any
 from langchain_core.documents import Document
-from backend.knowledge.repositories.vector_store_repository import (
+from knowledge.repositories.vector_store_repository import (
     VectorStoreRepository,
 )
-from backend.knowledge.services.ingestion.ingestion_processor import (
+from knowledge.services.ingestion.ingestion_processor import (
     IngestionProcessor,
 )
-from backend.knowledge.utils.markdown_utils import MarkDownUtils
-from backend.knowledge.config.settings import settings
+from knowledge.utils.markdown_utils import MarkDownUtils
+from knowledge.config.settings import settings
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -67,6 +67,7 @@ class RetrievalService:
         """
         self.chroma_vector = VectorStoreRepository()
         self.spliter = IngestionProcessor()
+
     # 在 Python 里，函数名前面加 _，通常是在告诉别人：这个函数是内部用的，不建议在类外部或模块外部直接调用。
     def rough_ranking(
         self, user_query, mds_metadata: List[Dict[str, Any]]
@@ -109,7 +110,7 @@ class RetrievalService:
 
         # 词项级匹配在最终分数中的权重
         # 因为相对于字符级，词项级更能反映真实关键词语义
-        ROUGHIN_WORD_WEIGHT = 0.7
+        ROUGHIN_WORD_WEIGHT = 0.3
 
         # 2. 遍历所有 markdown 文件元数据，给每个标题打一个粗排分数
         for md_metadata in mds_metadata:

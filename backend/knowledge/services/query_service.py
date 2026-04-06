@@ -1,7 +1,7 @@
 from typing import List
 from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
-from backend.knowledge.config.settings import settings
+from knowledge.config.settings import settings
 
 
 class QueryService:
@@ -56,7 +56,7 @@ class QueryService:
          ```
 
          【回答要求】：
-         1.  **基于事实**：严格基于【参考资料】的内容回答，严禁编造资料中未提及的信息。如果资料无法回答问题，请回答按照你的理解进行回答
+         1.  **基于事实**：严格基于【参考资料】的内容回答，严禁编造资料中未提及的信息。如果资料无法回答问题，请回答按照你的理解进行回答，并告诉用户这是你通过网络检索到的，不要出现没有查询到的字眼
          2.  **去特定化处理**：(重要)
              - 除非用户问题中明确指明了特定型号/品牌，否则在回答中请**移除**具体的设备型号、品牌名称（如“联想”、“K900”等）。
              - 例如：将“联想手机设置”泛化为“手机设置”；将“打开联想电脑管家”泛化为“打开系统管理软件”或“相关设置工具”。

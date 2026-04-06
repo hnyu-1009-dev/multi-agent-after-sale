@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 import uvicorn
 from fastapi import FastAPI
-from backend.knowledge.api.routers import router
+from knowledge.api.routers import router
 
 
 def create_fast_api() -> FastAPI:
@@ -29,6 +29,9 @@ def create_fast_api() -> FastAPI:
     return app
 
 
+app = create_fast_api()
+
+
 if __name__ == "__main__":
     # 程序直接运行时，会从这里开始执行
     print("1. 准备启动 Web 服务器")
@@ -38,7 +41,7 @@ if __name__ == "__main__":
         # app=create_fast_api()：创建 FastAPI 应用
         # host="127.0.0.1"：表示只允许本机访问
         # port=8001：服务运行端口
-        uvicorn.run(app=create_fast_api(), host="127.0.0.1", port=8001)
+        uvicorn.run(app="knowledge.api.main:app", host="127.0.0.1", port=8001)
 
         # 注意：
         # uvicorn.run() 是阻塞运行的，只有服务停止后才会继续执行下面这行

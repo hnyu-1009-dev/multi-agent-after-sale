@@ -2,8 +2,8 @@ import asyncio
 import httpx
 from typing import Dict
 from agents import function_tool
-from backend.app.infrastructure.logging.logger import logger
-from backend.app.config.settings import settings
+from app.infrastructure.logging.logger import logger
+from app.config.settings import settings
 
 
 @function_tool
@@ -24,7 +24,7 @@ async def query_knowledge(question: str) -> Dict:
             response = await client.post(
                 url=f"{settings.KNOWLEDGE_BASE_URL}/query",
                 json={"question": question},
-                timeout=60,
+                timeout=60000,
             )
 
             # 2. 处理异常情况(4xx-600x)直接抛出异常
@@ -45,7 +45,7 @@ async def query_knowledge(question: str) -> Dict:
 
 
 async def main():
-    result = await query_knowledge(question="电脑不能开机怎么解决?")
+    result = await query_knowledge(question="无法上网")
     print(result)
 
 

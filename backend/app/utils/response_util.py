@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 
 # 引入新的模型名称
-from backend.app.schemas.response import (
+from app.schemas.response import (
     StreamPacket,
     TextMessageBody,
     FinishMessageBody,

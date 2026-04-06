@@ -1,10 +1,10 @@
-from backend.app.infrastructure.database.database_pool import pool
+from app.infrastructure.database.database_pool import pool
 import json
 import stun
 from pymysql.cursors import DictCursor
 from agents import function_tool
-from backend.app.infrastructure.tools.mcp.mcp_servers import baidu_mcp_client
-from backend.app.infrastructure.logging.logger import logger
+from app.infrastructure.tools.mcp.mcp_servers import baidu_mcp_client
+from app.infrastructure.logging.logger import logger
 import math
 
 

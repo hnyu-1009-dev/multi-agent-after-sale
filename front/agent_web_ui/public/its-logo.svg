@@ -1,14 +1,19 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2196F3"/>
-      <stop offset="100%" stop-color="#1565C0"/>
+    <linearGradient id="logoBg" x1="10" y1="8" x2="90" y2="92" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17365B"/>
+      <stop offset="1" stop-color="#0F2340"/>
+    </linearGradient>
+    <linearGradient id="logoAccent" x1="26" y1="22" x2="72" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D6BF8A"/>
+      <stop offset="1" stop-color="#A61F2D"/>
     </linearGradient>
   </defs>
-  <!-- 圆角矩形背景 -->
-  <rect x="5" y="5" width="90" height="90" rx="15" fill="url(#logoGradient)" stroke="#E3F2FD" stroke-width="2"/>
-  <!-- 立体效果高光 -->
-  <rect x="10" y="10" width="80" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
-  <!-- 清晰的ITS文字 -->
-  <text x="50" y="65" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="white">ITS</text>
+  <rect x="6" y="6" width="88" height="88" rx="20" fill="url(#logoBg)"/>
+  <rect x="6.5" y="6.5" width="87" height="87" rx="19.5" stroke="#F2E7C9" stroke-opacity="0.45"/>
+  <circle cx="50" cy="50" r="24" fill="url(#logoAccent)" fill-opacity="0.16" stroke="#E7D7AE" stroke-width="2"/>
+  <path d="M34 37C39.2 30.6 46.3 27.4 54.1 27.4C63.2 27.4 70.3 31.2 74.9 38.8" stroke="#F7E7BF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M67 46.2C63.5 42.7 59.1 41 53.9 41C46.4 41 40.8 44.9 37.2 52.8" stroke="#F7E7BF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M29.6 60.3C34 69 41.3 73.8 51 73.8C60.1 73.8 67.2 69.9 71.8 62.5" stroke="#F7E7BF" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="50" cy="50" r="5.8" fill="#F7E7BF"/>
 </svg>

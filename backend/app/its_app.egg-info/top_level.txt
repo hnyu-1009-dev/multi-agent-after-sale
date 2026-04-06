@@ -5,4 +5,5 @@ multi_agent
 repositories
 schemas
 services
+tests
 utils

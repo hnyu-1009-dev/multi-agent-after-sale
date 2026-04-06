@@ -61,7 +61,7 @@ class Settings(BaseSettings):
     )
 
     # 子模型允许为空字符串，说明它不是启动必需项，而是“有就用、没有就跳过”的辅助配置。
-    SUB_MODEL_NAME: Optional[str] = Field(default="", description="qwen3-max")
+    SUB_MODEL_NAME: Optional[str] = Field(default="qwen3-max", description="子模型名称")
 
     # ==================== 数据库配置 ====================
 
@@ -98,6 +98,13 @@ class Settings(BaseSettings):
     )
 
     # ==================== Pydantic Settings 配置 ====================
+
+    MCP_STARTUP_ENABLED: bool = Field(
+        default=True, description="Whether MCP clients should connect during startup"
+    )
+    MCP_CONNECT_TIMEOUT_SECONDS: int = Field(
+        default=5, description="Per-client timeout in seconds for MCP startup connect"
+    )
 
     model_config = SettingsConfigDict(
         # 不把 .env 路径写成硬编码字符串，而是基于当前文件路径动态计算，
@@ -182,4 +189,3 @@ class Settings(BaseSettings):
 # 1. 配置只解析一次，避免每个模块重复读取 .env。
 # 2. 如果配置不合法，导入阶段就会失败，问题暴露更早。
 settings = Settings()
-        

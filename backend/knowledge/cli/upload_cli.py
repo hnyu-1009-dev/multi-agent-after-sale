@@ -1,35 +1,32 @@
-
-
-from backend.knowledge.repositories.file_repository import FileRepository
-from backend.knowledge.services.ingestion.ingestion_processor import (
+from knowledge.repositories.file_repository import FileRepository
+from knowledge.services.ingestion.ingestion_processor import (
     IngestionProcessor,
 )
-from backend.knowledge.config.settings import settings
+from knowledge.config.settings import settings
 
 from tqdm import tqdm
-import  time
+import time
 
 
-def  main():
+def main():
 
     print("1.批量将文档存储到向量数据库...")
 
-    file_repository=FileRepository()
+    file_repository = FileRepository()
 
-    files_path=file_repository.list_files(settings.CRAWL_OUTPUT_DIR)
+    files_path = file_repository.list_files(settings.CRAWL_OUTPUT_DIR)
     print(f"2.扫描到指定目录下的文件数:{len(files_path)}")
 
-    unique_files_path=file_repository.remove_duplicate_files(files_path)
+    unique_files_path = file_repository.remove_duplicate_files(files_path)
     print(f"3.扫描到指定目录下的唯一的文件数:{len(unique_files_path)}")
 
-    ingestion_processor=IngestionProcessor()
-    success=0
-    fail=0
+    ingestion_processor = IngestionProcessor()
+    success = 0
+    fail = 0
 
-
-    start_time=time.time()
+    start_time = time.time()
     # tqdm中传入的一定是可迭代对象
-    with tqdm(unique_files_path,desc="知识库上传进度统计") as pbar:  # 包装器思想
+    with tqdm(unique_files_path, desc="知识库上传进度统计") as pbar:  # 包装器思想
         for unique_file_path in pbar:
             try:
                 ingestion_processor.ingest_file(unique_file_path)
@@ -41,31 +38,11 @@ def  main():
 
     end_time = time.time()
 
-    total_time=end_time-start_time
+    total_time = end_time - start_time
 
     print(f"4.最终入库成功的结果:成功:{success}--->失败:{fail}")
     print(f"5. 最终入库成功的耗时:{total_time:.2f}s")
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,12 +2,13 @@ import os
 import hashlib
 from typing import List, Dict, Any
 
+
 class FileRepository:
     @staticmethod
     def get_file_hash(file_path: str) -> str:
         """计算文件的MD5哈希值"""
         hash_md5 = hashlib.md5()
-        with open(file_path, 'rb') as f:
+        with open(file_path, "rb") as f:
             for chunk in iter(lambda: f.read(4096), b""):
                 hash_md5.update(chunk)
         return hash_md5.hexdigest()
@@ -25,7 +26,9 @@ class FileRepository:
                     unique_files[file_hash] = file_path
                     unique_file_paths.append(file_path)
                 else:
-                    print(f"发现重复文件，跳过: {file_path} (与 {unique_files[file_hash]} 内容相同)")
+                    print(
+                        f"发现重复文件，跳过: {file_path} (与 {unique_files[file_hash]} 内容相同)"
+                    )
             except Exception as e:
                 print(f"计算文件哈希时出错 {file_path}: {str(e)}")
                 # 出错时仍保留文件
@@ -45,7 +48,7 @@ class FileRepository:
 
         try:
             # 尝试以 UTF-8 读取
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 return f.read()
 
         except UnicodeDecodeError:
@@ -76,7 +79,7 @@ class FileRepository:
             if directory:
                 os.makedirs(directory, exist_ok=True)
 
-            with open(file_path, 'w', encoding='utf-8') as f:
+            with open(file_path, "w", encoding="utf-8") as f:
                 f.write(content)
         except OSError as e:
             # 专门捕获文件系统错误 (如权限问题)

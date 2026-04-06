@@ -1,5 +1,5 @@
 from pathlib import Path
-from backend.app.infrastructure.logging.logger import logger
+from app.infrastructure.logging.logger import logger
 
 
 def load_prompt(prompt_name: str) -> str:

@@ -85,12 +85,12 @@ class MarkDownUtils:
         # 会匹配出：
         #   group(1) = 0430
         #   group(2) = 联想手机K900常见问题汇总
-        filename_pattern = re.compile(r'^(.+?)-(.*?)\.md$')
+        filename_pattern = re.compile(r"^(.+?)-(.*?)\.md$")
 
         # 遍历目录下所有文件名
         for filename in os.listdir(folder_path):
             # 只处理 Markdown 文件
-            if filename.endswith('.md'):
+            if filename.endswith(".md"):
 
                 # 使用正则判断文件名是否符合“编号-标题.md”格式
                 match = filename_pattern.match(filename)
@@ -104,10 +104,9 @@ class MarkDownUtils:
                     title = os.path.splitext(filename)[0].strip()
 
                 # 将当前文件的路径和标题作为一个字典加入结果列表
-                md_metadata.append({
-                    "path": os.path.join(folder_path, filename),
-                    "title": title
-                })
+                md_metadata.append(
+                    {"path": os.path.join(folder_path, filename), "title": title}
+                )
 
         # 返回收集到的所有 Markdown 文件元数据
         return md_metadata
@@ -151,7 +150,7 @@ class MarkDownUtils:
         filename = os.path.basename(file_path)
 
         # 定义与 collect_md_metadata 相同的文件名匹配规则
-        filename_pattern = re.compile(r'^(.+?)-(.*?)\.md$')
+        filename_pattern = re.compile(r"^(.+?)-(.*?)\.md$")
 
         # 尝试匹配“编号-标题.md”格式
         match = filename_pattern.match(filename)
@@ -213,7 +212,7 @@ class MarkDownUtils:
         # r'!\$$[^$$]*\]\((https?://[^\s\)]+)\)'
         # 从意图上看，是想匹配 Markdown 图片并抓取 URL。
         # 如果后续你发现图片没有正常替换，很可能需要检查这个正则是否符合你的实际文本格式。
-        pattern = r'!\$$[^$$]*\]\((https?://[^\s\)]+)\)'
+        pattern = r"!\$$[^$$]*\]\((https?://[^\s\)]+)\)"
 
         def replace_func(match):
             """
@@ -231,7 +230,7 @@ class MarkDownUtils:
 
         # 将连续 3 个及以上换行压缩为 2 个换行
         # 避免替换后文本出现过多空行，影响阅读和后续切分
-        cleaned = re.sub(r'\n{3,}', '\n\n', cleaned)
+        cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
 
         # 去掉首尾空白字符并返回
         return cleaned.strip()

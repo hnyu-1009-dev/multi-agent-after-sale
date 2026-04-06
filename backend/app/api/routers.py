@@ -1,10 +1,10 @@
 from fastapi.routing import APIRouter
 from starlette.responses import StreamingResponse
 
-from backend.app.schemas.request import ChatMessageRequest, UserSessionsRequest
-from backend.app.services.agent_service import MultiAgentService
-from backend.app.infrastructure.logging.logger import logger
-from backend.app.services.session_service import session_service
+from app.schemas.request import ChatMessageRequest, UserSessionsRequest
+from app.services.agent_service import MultiAgentService
+from app.infrastructure.logging.logger import logger
+from app.services.session_service import session_service
 
 # 1. 定义请求路由器
 router = APIRouter()

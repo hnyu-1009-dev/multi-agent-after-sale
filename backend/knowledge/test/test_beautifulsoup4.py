@@ -30,7 +30,7 @@ dirty_html = """
 
 def clean_html_with_bs4(html_content):
     # 1. 创建 Soup 对象 (解析器推荐用 html.parser)
-    soup = BeautifulSoup(html_content, 'html.parser')
+    soup = BeautifulSoup(html_content, "html.parser")
 
     print("--- 原始结构中包含广告和脚本 ---")
 
@@ -43,7 +43,7 @@ def clean_html_with_bs4(html_content):
 
     # B. 移除特定的广告类 (根据你的 JSON 数据)
     # select() 使用 CSS 选择器，非常灵活
-    for ad in soup.select('.mceNonEditable'):
+    for ad in soup.select(".mceNonEditable"):
         ad.decompose()
 
     # 4. 输出清洗后的 HTML 字符串

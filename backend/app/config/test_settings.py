@@ -1,7 +1,7 @@
 import sys
 import socket
 from pydantic import ValidationError
-from backend.app.config.settings import settings
+from app.config.settings import settings
 
 
 def mask_secret(secret: str | None) -> str:

@@ -1,10 +1,10 @@
 import asyncio
 from agents import Agent, ModelSettings, Runner
-from backend.app.infrastructure.ai.openai_client import sub_model
-from backend.app.infrastructure.ai.openai_client import main_model
-from backend.app.infrastructure.ai.prompt_loader import load_prompt
-from backend.app.multi_agent.agent_factory import AGENT_TOOLS
-from backend.app.infrastructure.tools.mcp.mcp_servers import (
+from app.infrastructure.ai.openai_client import sub_model
+from app.infrastructure.ai.openai_client import main_model
+from app.infrastructure.ai.prompt_loader import load_prompt
+from app.multi_agent.agent_factory import AGENT_TOOLS
+from app.infrastructure.tools.mcp.mcp_servers import (
     search_mcp_client,
     baidu_mcp_client,
 )
@@ -13,102 +13,140 @@ from contextlib import AsyncExitStack
 # 1. 创建主调度智能体
 orchestrator_agent = Agent(
     name="主调度智能体",
+    # name: 当前这个 Agent 的名称。
+    #
+    # 这个名字的作用主要是：
+    # 1. 标识它在整个多 Agent 系统中的角色
+    # 2. 方便日志、调试、观察链路时快速识别
+    #
+    # 从命名上也能看出来，它不是具体干活的专家，
+    # 而是“负责统一调度和分发任务”的总控角色。
+
     instructions=load_prompt("orchestrator_v1"),
+    # instructions: 主调度智能体的系统提示词（prompt）。
+    #
+    # 这里通过 load_prompt("orchestrator_v1") 加载一份专门给总控 Agent 用的提示词。
+    #
+    # 这份 prompt 一般会定义：
+    # - 这个 Agent 的职责是什么
+    # - 它应该如何理解用户问题
+    # - 它什么时候该自己回答，什么时候该调用工具
+    # - 它如何在多个专家 Agent 工具之间做路由
+    #
+    # 由于它是“主调度智能体”，
+    # 所以这份 prompt 的重点通常不是领域知识本身，
+    # 而是：
+    # 1. 意图识别
+    # 2. 任务分类
+    # 3. 专家选择
+    # 4. 路由策略
+    #
+    # 也就是说：
+    # 主调度 Agent 的核心能力，不在于它自己懂多少，
+    # 而在于它能不能把问题正确分配给合适的子 Agent。
+
     # model=main_model,   # 推理模型（ds_r1[1.科学 2.计算 3.需求拆解]） (已推理为主，干活其次【funcation_call】)
-    model=sub_model,  # 通用模型（已干活为主 推理可能有或者都没有）
+    # 这行被注释掉了，说明你原本考虑过用 main_model 作为主调度模型。
+    #
+    # 从注释看，你对 main_model 的定位是：
+    # - 更偏推理
+    # - 更适合需求拆解
+    # - 更擅长做“判断”和“决策”
+    # - 不一定擅长高频工具执行
+    #
+    # 这其实非常符合“总控 Agent”的典型设计思路：
+    # 总控 Agent 负责分析问题、拆解需求、做路由决策，
+    # 不一定亲自下场执行所有任务。
+    #
+    # 你注释里写的“干活其次【function_call】”，意思可以理解为：
+    # 它更适合负责上层策略和判断，
+    # 而不是频繁进行工具调用和业务执行。
+
+    model=sub_model,
+    # model: 当前真正生效的底层模型。
+    #
+    # 这里你没有使用上面的 main_model，
+    # 而是改成了 sub_model。
+    #
+    # 你自己的注释也已经点出了它的特点：
+    # - 更偏“干活”
+    # - 更偏实际执行
+    # - 推理能力可能有，但不一定像推理模型那样强
+    #
+    # 这意味着你当前做了一个架构上的取舍：
+    # 不是用一个“更强的推理模型”来做调度，
+    # 而是直接用一个“更务实的通用执行模型”来做总控。
+    #
+    # 这种选择的潜在优点：
+    # 1. 成本可能更低
+    # 2. 工具调用更直接
+    # 3. 执行效率可能更高
+    #
+    # 潜在风险：
+    # 1. 复杂问题的路由判断不一定最优
+    # 2. 需求拆解能力可能不如专门的推理模型
+    #
+    # 也就是说，这里本质上是在平衡：
+    # - “推理和决策能力”
+    # - “实际工具执行能力”
+    #
+    # 如果后续你发现总控 Agent 容易路由错，
+    # 一个优化方向就是重新切回 main_model 试验。
+
     model_settings=ModelSettings(
         temperature=0,
     ),
+    # model_settings: 模型运行参数。
+    #
+    # temperature=0 的作用是：
+    # - 尽量减少模型随机发挥
+    # - 让输出更稳定
+    # - 让同类输入更容易得到一致决策
+    #
+    # 对主调度 Agent 来说，这个设置非常合理。
+    #
+    # 因为调度 Agent 最重要的是：
+    # - 稳定判断
+    # - 稳定分类
+    # - 稳定路由
+    #
+    # 如果 temperature 太高，可能会出现：
+    # - 同一个问题有时路由给技术专家
+    # - 有时又路由给业务专家
+    #
+    # 这种不稳定在多 Agent 系统里是比较危险的，
+    # 所以主调度层通常更适合低温甚至 0 温度。
+
     # 直接使用Agent Tools
     tools=AGENT_TOOLS,
+    # tools: 当前主调度智能体可调用的工具列表。
+    #
+    # 这里传入的不是普通业务函数，而是你前面封装好的“专家智能体工具”集合。
+    #
+    # 也就是说：
+    # AGENT_TOOLS 里的每一个工具，背后其实都对应一个专家 Agent。
+    #
+    # 例如：
+    # - consult_technical_expert
+    #   -> 内部会转交 technical_agent
+    #
+    # - query_service_station_and_navigate
+    #   -> 内部会转交 comprehensive_service_agent
+    #
+    # 所以对 orchestrator_agent 来说，
+    # 它并不是直接操作底层地图、知识库、维修站查询逻辑，
+    # 而是通过这些“工具化的专家入口”进行调度。
+    #
+    # 这其实就是典型的多 Agent 分层架构：
+    #
+    # 用户问题
+    #   -> 主调度智能体 orchestrator_agent
+    #       -> 选择一个专家工具
+    #           -> 专家工具内部运行对应的子 Agent
+    #               -> 子 Agent 再调自己的模型 / 本地工具 / MCP 工具
+    #
+    # 这种设计的核心优势是：
+    # 1. 主调度层只做意图识别和任务分发
+    # 2. 领域能力沉淀在各自专家 Agent 内部
+    # 3. 系统更容易扩展和维护
 )
-
-
-# 3. 测试方法
-async def run_single_test(case_name: str, input_text: str):
-    print(f"\n{'=' * 80}")
-    print(f"测试用例: {case_name}")
-    print(f'输入: "{input_text}"')
-    print("-" * 80)
-
-    # 使用 AsyncExitStack 同时管理多个连接
-    async with AsyncExitStack() as stack:
-        try:
-            print("连接 MCP 服务中...")
-            # 1. 进入上下文
-            await stack.enter_async_context(search_mcp_client)
-            await stack.enter_async_context(baidu_mcp_client)
-            print("思考中...")
-
-            # 2. 使用流式处理运行 Orchestrator Agent
-            result = Runner.run_streamed(
-                starting_agent=orchestrator_agent,
-                input=input_text,
-            )
-
-            # 3. 遍历流式事件
-            async for event in result.stream_events():
-
-                # 3.1 run_item_stream_event级别的事假（Agent运行时产生的事假）
-                if event.type == "run_item_stream_event":
-                    # a. Agent运行时的工具调用事件
-                    if hasattr(event, "name") and event.name == "tool_called":
-                        from agents import ToolCallItem
-
-                        if isinstance(event.item, ToolCallItem):
-                            raw_item = event.item.raw_item
-                            print(
-                                f"\n调用工具名:{raw_item.name}--->工具参数:{raw_item.arguments}"
-                            )
-
-                    # b. Agent运行时的工具执行完后事件
-                    elif hasattr(event, "name") and event.name == "tool_output":
-                        from agents import ToolCallOutputItem
-
-                        if isinstance(event.item, ToolCallOutputItem):
-                            print(f"调用工具结果:{event.item.output}")
-
-            # 4. 打印最终结果（最后协调Agent的输出）
-            print(f"\n最终输出（来自 {result.last_agent.name}）:")
-            print(f"{result.final_output}")
-
-        except Exception as e:
-            print(f"\n 异常原因 {e}\n")
-
-
-async def main():
-    print("\n" + "=" * 80)
-    print("测试协调Agent (Orchestrator)")
-    print("=" * 80)
-
-    # 定义测试案例
-    test_cases = [
-        # A:咨询技术智能体
-        # ("单个任务（实时问题）", "今天AI圈发生了些什么事儿"),
-        # ("单个任务（技术问题）", "为什么 Windows 7 中删除文件之后，在回收站找不到呢？"),
-        # ("组合任务（1.技术问题 2.资讯）", "为什么 Windows 7 中删除文件之后，在回收站找不到呢？，顺便准备看一下今天天气怎么样"),
-        # ("组合任务（1.资讯 2.技术问题 ）", "先准备看一下今天天气怎么样，顺便在问一下我最近电脑总是不能开机，怎么解决?")
-        # 服务站与导航智能体
-        # ("单个任务（服务站查询）", "帮我找个最近的维修站"),
-        # ("单个任务（POI导航）", "天安门广场都有哪些商场"),
-        # ("组合任务（1.服务站 2.POI）", "帮我导航到最近的小米之家？，顺便准备看一下它附近都有哪些商场"),
-        # ("组合任务（1.POI 2.服务站）", "昌平区温都水城有哪些健身房，然后再看一下附近有哪些维修站，我准备维修电脑")
-        # ("多跳任务(先实时问题在服务站)","查一下今天北京的天气预报，如果下雨的话，就帮我找一家最近的服务站，我去躲躲雨顺便维修电脑。"),
-        # ("多跳任务(先技术问题在服务站)","我的联想笔记本开机蓝屏代码怎么解决？如果太复杂处理不了，就直接帮我导航去最近的联想官方服务站。"),
-        # ("混合需求(先实时问题在POI导航)", "帮我查一下今天故宫的门票售罄了吗？如果没有，请给导航去故宫博物院。"),
-        # ("多跳任务(先技术问题在POI导航)", "电脑无法开机怎么办？问完这个，请帮我导航去清华大学，我想去拍夜景。"),
-        # ("多跳任务（先服务站在实时问题）", "帮我找一家最近的小米之家。另外，顺便查一下小米汽车现在的交付周期是多久？"),
-        # ("多跳任务（先服务站在技术问题）","请给我导航去附近的苹果官方维修点。在路上我想了解一下，iPhone 电池健康度掉到 80% 以下必须更换吗？"),
-        # ("多跳任务（先POI在实时问题）", "我想去欢乐谷玩，请生成导航链接。顺便查一下今天欢乐谷闭园时间是几点？"),
-        # ("多跳任务（先POI在技术问题）", "导航去中关村电子城。另外我想问问，组装一台 4090 显卡的电脑大概需要多大功率的电源？")
-    ]
-
-    # 循环执行测试
-    for name, inp in test_cases:
-        await run_single_test(name, inp)
-
-    print("\n所有测试完成！\n")
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
